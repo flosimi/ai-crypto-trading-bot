@@ -57,22 +57,26 @@ pip install -r requirements.txt
 ```
 
 ### Configurare (obligatoriu înainte de rulare!)
-Deschide `ai_trading_bot.py` și completează:
-```python
-BINANCE_API_KEY    = "cheia_ta_api"
-BINANCE_API_SECRET = "secretul_tau"
-CLAUDE_API_KEY     = "cheia_anthropic"
-CAPITAL_USDT       = 400   # câți $ aloci
+
+Cheile Binance se dau ca variabile de mediu, **niciodată** scrise direct în `ai_trading_bot.py` (fișierul e urmărit de git — orice cheie scrisă acolo ajunge în istoricul repo-ului).
+
+**PowerShell (Windows):**
+```powershell
+$env:BINANCE_API_KEY="cheia_ta"
+$env:BINANCE_API_SECRET="secretul_tau"
+python ai_trading_bot.py --capital 400
 ```
+
+**Linux/macOS:**
+```bash
+export BINANCE_API_KEY="cheia_ta"
+export BINANCE_API_SECRET="secretul_tau"
+python ai_trading_bot.py --capital 400
+```
+
+Tab-ul **Settings** din React app generează automat comanda de mai sus, cu cheile tale completate — le poți copia direct de acolo.
 
 Citește `SETUP_GUIDE.md` pentru instrucțiuni complete API Binance.
-
-### Rulare
-```bash
-python ai_trading_bot.py
-```
-
----
 
 ## ⚠️ Workflow recomandat
 
