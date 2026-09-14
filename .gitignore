@@ -1,0 +1,19 @@
+# Python
+Python_bot/__pycache__/
+Python_bot/*.pyc
+Python_bot/venv/
+Python_bot/bot_config.json
+*.log
+
+# Node / React / Electron
+react-app/node_modules/
+react-app/dist/
+react-app/release/
+
+# Local backups and tooling configs
+backup_*/
+.claude/
+
+# Env files (in case one ever gets added)
+.env
+.env.*
